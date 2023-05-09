@@ -1,2 +1,2 @@
 #!/bin/bash
-export python3 $PYFILE
+python3 "${PYFILE}"
