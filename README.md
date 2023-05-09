@@ -1,6 +1,5 @@
 Holberton Python, C and Bash Codebase
 
-
 # create venv with Python-3.8.13
 1. Download the python version
 ```
@@ -45,3 +44,4 @@ run pycodestyle
 I wrote a very detailed and structured readme but all got deleted for some reson
 So i made this just for me
 I guess sometimes shit happen
+
