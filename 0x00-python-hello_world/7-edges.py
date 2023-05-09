@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+word = "Holberton"
+f3l = word[:2]
+f2l = word[:1]
+mid = word[1:8]
+print(f"First 3 letters: {f3l}")
+print(f"Last 2 letters: {f2l}")
+print(f"Middle word: {mid}")
