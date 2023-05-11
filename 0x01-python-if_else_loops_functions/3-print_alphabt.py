@@ -4,4 +4,3 @@ for i in range(97, 123):
     if i != 113 and i != 101:
         alphabet += chr(i)
 print(alphabet, end="")
-
