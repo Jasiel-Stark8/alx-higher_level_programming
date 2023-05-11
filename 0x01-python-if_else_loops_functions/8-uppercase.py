@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 def uppercase(str):
     up = ""
-    for i in str.split():
-        if 97 <= ord(c) <= 122:
-            up += chr(ord(str) - 32)
+    for i in str:
+        if 97 <= ord(i) <= 122:
+            up += chr(ord(i) - 32)
         else:
-            result += c  # Leave it as it is
-    print(result)
+            up += i  # Leave it as it is
+    print(up)
+
+# Test the function
+# uppercase("hello world")
