@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-number = range(0, 99)
-for i in number:
-    print(f"{i} = {hex(i)}")
+for i in range(0, 99):
+    print("{} = {}".format(i, hex(i)))
