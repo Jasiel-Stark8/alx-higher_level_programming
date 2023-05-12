@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 import os
-import sys
+import py_compile
 
-# Assuming the python file name is passed as a command-line argument
-PYFILE = sys.argv[1]
+# The Python file name will be stored in the environment variable $PYFILE
+PYFILE = os.environ.get('PYFILE')
 
-# Execute the python file
-os.system(f'python3 {PYFILE}')
+# Compile the Python file
+py_compile.compile(PYFILE)
 
-# Get the base name without extension
-base = os.path.splitext(PYFILE)[0]
+# The output filename has to be $PYFILEc
+base, ext = os.path.splitext(PYFILE)
 
-# Append 'c' at the end of the filename
-os.rename(PYFILE, base + 'c')
+# Rename file
+os.rename(PYFILE + 'c', base + 'c')
