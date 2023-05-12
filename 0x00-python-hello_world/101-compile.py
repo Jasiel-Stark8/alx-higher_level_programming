@@ -2,14 +2,14 @@
 import os
 import py_compile
 
-# The Python file name will be stored in the environment variable $PYFILE
-PYFILE = os.environ.get('PYFILE')
+# Store Python file name in environment variable $PYFILE
+PYFILE = os.getenv('PYFILE')
 
 # Compile the Python file
 py_compile.compile(PYFILE)
 
-# The output filename has to be $PYFILEc
-base, ext = os.path.splitext(PYFILE)
+# Rename the compiled file
+os.rename(PYFILE + 'c', PYFILE + 'c')
 
-# Rename file
-os.rename(PYFILE + 'c', base + 'c')
+# Console progress reporting
+print('Compiling {} ...'.format(PYFILE))
