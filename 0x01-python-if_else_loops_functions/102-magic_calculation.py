@@ -7,6 +7,5 @@ def magic_calculation(a, b, c):
         return a + b
     return a * b - c
 
-
 # print(magic_calculation(1, 2, 3))
 # dis.dis(magic_calculation)
