@@ -4,7 +4,10 @@ import sys
 if __name__ == '__main__':
     num = len(sys.argv) - 1
     # subtract 1 because the script name is also included in sys.argv
-    if num == 1:
+
+    if num == 0:
+        print("0 arguments.")
+    elif num == 1:
         print("{} argument:".format(num))
     else:
         print("{} arguments:".format(num))
