@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import sys
 
 if __name__ == '__main__':
+    import sys
     num = len(sys.argv) - 1
     # subtract 1 because the script name is also included in sys.argv
 
