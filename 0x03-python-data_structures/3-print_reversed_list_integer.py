@@ -14,4 +14,4 @@ def print_reversed_list_integer(my_list=[]):
     for i in my_list:
         if not isinstance(i, int):
             raise TypeError(f"Expected an integer, but got {type(i).__name__}")
-        print("{:d}".format(i))
+        print("{:d}".format(i), end='')
