@@ -1,63 +1,72 @@
 #include "lists.h"
-#include <stdlib.h>
+
+listint_t *reverse_listint(listint_t **head);
+int is_palindrome(listint_t **head);
 
 /**
- * is_palindrome - checks if a singly linked list is a palindrome
- * @head: double pointer to the head of the singly linked list
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * reverse_listint - Reverses a singly-linked listint_t list.
+ * @head: A pointer to the starting node of the list to reverse.
+ *
+ * Return: A pointer to the head of the reversed list.
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *node = *head, *next, *prev = NULL;
+
+	while (node)
+	{
+		next = node->next;
+		node->next = prev;
+		prev = node;
+		node = next;
+	}
+
+	*head = prev;
+	return (*head);
+}
+
+/**
+ * is_palindrome - Checks if a singly linked list is a palindrome.
+ * @head: A pointer to the head of the linked list.
+ *
+ * Return: If the linked list is not a palindrome - 0.
+ *         If the linked list is a palindrome - 1.
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *slow = *head, *fast = *head, *prev, *tmp;
-    int is_palin = 1;
+	listint_t *tmp, *rev, *mid;
+	size_t size = 0, i;
 
-    if (!head || !(*head) || !(*head)->next)
-        return (1);
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
 
-    while (fast && fast->next)
-    {
-        fast = fast->next->next;
-        prev = slow;
-        slow = slow->next;
-    }
+	tmp = *head;
+	while (tmp)
+	{
+		size++;
+		tmp = tmp->next;
+	}
 
-    prev->next = NULL;
-    prev = NULL;
+	tmp = *head;
+	for (i = 0; i < (size / 2) - 1; i++)
+		tmp = tmp->next;
 
-    while (slow)
-    {
-        tmp = slow->next;
-        slow->next = prev;
-        prev = slow;
-        slow = tmp;
-    }
+	if ((size % 2) == 0 && tmp->n != tmp->next->n)
+		return (0);
 
-    fast = *head;
-    slow = prev;
+	tmp = tmp->next->next;
+	rev = reverse_listint(&tmp);
+	mid = rev;
 
-    while (slow && fast)
-    {
-        if (slow->n != fast->n)
-        {
-            is_palin = 0;
-            break;
-        }
-        slow = slow->next;
-        fast = fast->next;
-    }
+	tmp = *head;
+	while (rev)
+	{
+		if (tmp->n != rev->n)
+			return (0);
+		tmp = tmp->next;
+		rev = rev->next;
+	}
+	reverse_listint(&mid);
 
-    slow = prev;
-    prev = NULL;
-
-    while (slow)
-    {
-        tmp = slow->next;
-        slow->next = prev;
-        prev = slow;
-        slow = tmp;
-    }
-
-    (*head)->next = prev;
-
-    return (is_palin);
+	return (1);
 }
