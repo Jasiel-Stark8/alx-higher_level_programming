@@ -2,7 +2,6 @@
 def multiple_returns(sentence):
     if not sentence:
         return len(sentence), None
-    for i in sentence:
-        if isinstance(i, str):
-            return len(sentence), i
+    else:
+        return len(sentence), sentence[0]
     # return len(sentence), None
