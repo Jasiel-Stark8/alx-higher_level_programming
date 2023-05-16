@@ -7,7 +7,6 @@
 #             else:
 #                 print("{:d}".format(row[i]), end=" ")
 
-#!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
