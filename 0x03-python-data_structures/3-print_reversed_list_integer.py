@@ -9,9 +9,11 @@
 #     for i in my_list:
 #         print("{:d}".format(i))
 
+
 def print_reversed_list_integer(my_list=[]):
+    if my_list is None:
+        return
+
     my_list.reverse()
-    for i in my_list:
-        if not isinstance(i, int):
-            raise TypeError(f"Expected an integer, but got {type(i).__name__}")
-        print("{:d}".format(i))
+    for number in my_list:
+        print("{:d}".format(number))
