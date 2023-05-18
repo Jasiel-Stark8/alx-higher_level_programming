@@ -23,5 +23,5 @@ class Solution:
         return number
 
 
-task = Solution()
-print(task.roman_to_int('MCMXCIV'))  # Output: 1994
+# task = Solution()
+# print(task.roman_to_int('MCMXCIV'))  # Output: 1994
