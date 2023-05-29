@@ -1,0 +1,7 @@
+Python Exception Handling References
+
+GFG:
+https://www.geeksforgeeks.org/python-exception-handling/
+
+W3schools:
+https://www.w3schools.com/python/python_try_except.asp
