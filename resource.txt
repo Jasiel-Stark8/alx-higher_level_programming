@@ -1,0 +1,12 @@
+Python Encyclopedia:
+https://realpython.com/python-basics/resources/#chapter-8-conditional-logic-and-control-flow
+
+w3schools:
+https://www.w3schools.com/python/python_try_except.asp
+
+DSA:
+Programiz --> https://www.programiz.com/dsa/algorithm
+GeeksforGeeks -> https://practice.geeksforgeeks.org/courses/Data-Structures-With-Python?utm_source=geeksforgeeks&utm_medium=right_sidebar&utm_campaign=course_card
+
+Educative Course:
+https://www.educative.io/courses/learn-python-3-from-scratch/JY95xAk6wJK
