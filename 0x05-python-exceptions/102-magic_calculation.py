@@ -5,7 +5,7 @@ def magic_calculation(a, b):
         try:
             if i < a:
                 result += i
-            if i > b:
+            else:
                 result += b[i]
         except IndexError:
             break
