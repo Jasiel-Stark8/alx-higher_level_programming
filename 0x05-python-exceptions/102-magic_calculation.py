@@ -6,6 +6,6 @@ def magic_calculation(a, b):
             if i < a:
                 result += a
         except IndexError:
-            result += b[i]
-        result = a[i] + b[i]
+            result += b
+        result = a + b
     return result
