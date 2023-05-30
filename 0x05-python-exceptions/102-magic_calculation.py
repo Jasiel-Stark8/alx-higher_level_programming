@@ -3,8 +3,8 @@ def magic_calculation(a, b):
     result = 0
     for i in range(0, 103):
         try:
-            if i < a:
-                result += a
+            if i > a:
+                result += i
         except IndexError:
             result += b
         result = a + b
