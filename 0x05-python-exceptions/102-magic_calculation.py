@@ -7,5 +7,5 @@ def magic_calculation(a, b):
                 result += a
         except IndexError:
             result += b[i]
-        result = a + b
+        result = a[i] + b[i]
     return result
