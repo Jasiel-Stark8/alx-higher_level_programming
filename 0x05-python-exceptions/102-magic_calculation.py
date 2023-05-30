@@ -8,6 +8,6 @@ def magic_calculation(a, b):
             else:
                 result += b[i]
         except IndexError:
+            result = a + b
             break
-        result = a + b
     return result
