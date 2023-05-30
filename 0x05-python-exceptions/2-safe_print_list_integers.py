@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     try:
         count = 0
@@ -12,5 +11,5 @@ def safe_print_list_integers(my_list=[], x=0):
         print()
         return count
     except IndexError:
-        print("Error while printing list.")
+        print("An error occurred while printing the list.")
         return count
