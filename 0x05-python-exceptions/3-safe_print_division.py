@@ -3,7 +3,7 @@
 def safe_print_division(a, b):
     try:
         result = a / b
-    except ZeroDivisionError:
+    except (TypeError, ZeroDivisionError):
         print("Can't Divide By Zero.")
         return None
     finally:
