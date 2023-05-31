@@ -26,9 +26,11 @@ class Square:
             self.__size = value
 
     def area(self):
+        """returns area of square matrix"""
         return self.__size ** 2
 
     def my_print(self):
+        """print the sqaure matrix using '#' notation"""
         if self.__size == 0:
             print()
         else:
