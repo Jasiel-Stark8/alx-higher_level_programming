@@ -5,13 +5,14 @@
 class Square:
     """A class that defines a square"""
     def __init__(self, size=0):
-        # self.__size = 0  # Initialize the private attribute
+        self.__size = 0  # Initialize the private attribute
 
         # Use the setter method to set the initial size
         self.size = size
 
     @property
     def size(self):
+        """Get size of square matrix"""
         return self.__size
 
     @size.setter
