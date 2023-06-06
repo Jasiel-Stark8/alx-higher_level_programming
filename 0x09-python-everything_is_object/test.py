@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-"""get function type"""
+a  = 12
+print(id(a))
