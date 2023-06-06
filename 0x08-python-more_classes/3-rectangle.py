@@ -42,16 +42,11 @@ class Rectangle:
 
     def perimeter(self):
         """Return the perimiter of the rectangle"""
-        if self.width == 0 or self.height == 0:
-            return 0
-        return (self.width + self.height) * 2
+        return 0 if self.width == 0 or self.height == 0 else 2 * \
+            (self.width + self.height)
 
-    def print(self):
-        """Print the rectangle using '#'"""
+    def __str__(self):
+        """Print the string representation of the rectangle"""
         if self.width == 0 or self.height == 0:
-            print()
-        else:
-            for i in range(self.height):
-                for j in range(self.width):
-                    print("#", end="")
-                print()
+            return ""
+        return "\n".join(["#" * self.width for i in range(self.height)])
