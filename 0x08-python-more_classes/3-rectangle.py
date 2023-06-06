@@ -49,6 +49,6 @@ class Rectangle:
             print()
         else:
             for i in range(self.__width):
-                for i in range(self.__height):
+                for j in range(self.__height):
                     print("#", end="")
             print()
