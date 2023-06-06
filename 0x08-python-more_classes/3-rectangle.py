@@ -47,7 +47,7 @@ class Rectangle:
         return (self.width + self.height) * 2
 
     def print(self):
-        """Print the rectangle str("#")"""
+        """Print the rectangle using '#'"""
         if self.width == 0 or self.height == 0:
             print()
         else:
