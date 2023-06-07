@@ -3,10 +3,14 @@
 
 
 class Rectangle:
+    
+    number_of_instances = 0
+    
     """An empty class Rectangle"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -36,12 +40,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    number_of_instances = 0
-    while number_of_instances > 0:
-        number_of_instances += 1
-    if number_of_instances == 0:
-        number_of_instances -= 1
-
     def area(self):
         """Return the area of the rectangle"""
         return self.width * self.height
@@ -64,3 +62,4 @@ class Rectangle:
     def __del__(self):
         """Print representation of the rectangle being deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
