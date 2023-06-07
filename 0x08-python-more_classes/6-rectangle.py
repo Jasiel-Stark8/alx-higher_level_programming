@@ -3,9 +3,9 @@
 
 
 class Rectangle:
-    
+
     number_of_instances = 0
-    
+
     """An empty class Rectangle"""
     def __init__(self, width=0, height=0):
         self.width = width
