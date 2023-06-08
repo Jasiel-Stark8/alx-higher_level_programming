@@ -8,9 +8,10 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0, print_symbol=''):
         self.width = width
         self.height = height
+        self.print_symbol = print_symbol
         Rectangle.number_of_instances += 1
 
     @property
@@ -58,7 +59,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return the string representation of the rectangle"""
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({self.print_symbol} {self.width}, {self.height})"
 
     def __del__(self):
         """Print representation of the rectangle being deleted"""
