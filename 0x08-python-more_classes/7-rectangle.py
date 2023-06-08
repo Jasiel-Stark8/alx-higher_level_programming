@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Rectangle:
     """Represents a rectangle."""
     number_of_instances = 0
