@@ -6,12 +6,13 @@ class Rectangle:
     """Class defining Rectangle"""
 
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
-    def __init__(self, width=0, height=0, print_symbol=''):
+    def __init__(self, width=0, height=0, print_symbol=None):
         self.width = width
         self.height = height
-        self.print_symbol = print_symbol
+        if print_symbol is not None:
+            Rectangle.print_symbol = print_symbol
         Rectangle.number_of_instances += 1
 
     @property
@@ -53,13 +54,13 @@ class Rectangle:
 
     def __str__(self):
         """Return the string representation of the rectangle with '#'"""
-        if self.width == 0 or self.height == 0:
+        if not self.width or not self.height:
             return ""
-        return "\n".join(["#" * self.width for _ in range(self.height)])
+        return "\n".join([Rectangle.print_symbol * self.width for _ in range(self.height)])
 
     def __repr__(self):
         """Return the string representation of the rectangle"""
-        return f"Rectangle({self.print_symbol} {self.width}, {self.height})"
+        return f"Rectangle({Rectangle.print_symbol} {self.width}, {self.height})"
 
     def __del__(self):
         """Print representation of the rectangle being deleted"""
