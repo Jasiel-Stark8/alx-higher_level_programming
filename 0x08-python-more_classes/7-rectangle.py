@@ -49,18 +49,17 @@ class Rectangle:
 
     def perimeter(self):
         """Return the perimeter of the rectangle"""
-        return 0 if self.width == 0 or self.height == 0 else 2 * \
-            (self.width + self.height)
+        return 0 if self.width == 0 or self.height == 0 else 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return the string representation of the rectangle with '#'"""
+        """Return the string representation of the rectangle with the specified print_symbol"""
         if not self.width or not self.height:
             return ""
-        return "\n".join([Rectangle.print_symbol * self.width for _ in range(self.height)])
+        return "\n".join([str(Rectangle.print_symbol) * self.width for _ in range(self.height)])
 
     def __repr__(self):
         """Return the string representation of the rectangle"""
-        return f"Rectangle({Rectangle.print_symbol} {self.width}, {self.height})"
+        return f"Rectangle('{Rectangle.print_symbol}', {self.width}, {self.height})"
 
     def __del__(self):
         """Print representation of the rectangle being deleted"""
