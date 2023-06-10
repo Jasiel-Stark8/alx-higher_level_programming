@@ -3,11 +3,11 @@
 
 
 def add_integer(a, b=98):
-    """Add integer"""
-    if a is not isinstance(b, int):
+    """This module adds 2 integers and returns the sum \
+        which is casted in an int()"""
+
+    if a is not isinstance(a, int):
         raise TypeError("a must be an integer")
     if b is not isinstance(b, int):
         raise TypeError("b must be an integer")
-    type(int(a))
-    type(int(b))
-    return a + b
+    return int(a) + int(b)
