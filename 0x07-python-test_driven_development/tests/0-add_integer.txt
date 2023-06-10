@@ -4,6 +4,11 @@ from 0-add_integer import add_integer
 class Test_add_integer(unittest.TestCase):
     def test_InputType(self):
         # Test input values
-        self.assertIsInstance(int, float)
+        self.assertIsInstance(int, 4)
+        self.assertIsInstance(float, 4.0)
 
+    def test_raise_exception(self):
+        # Test raise exception
+        self.assertRaises("a must be an integer or a float")
+        self.assertRaises("b must be an integer or a float")
 
