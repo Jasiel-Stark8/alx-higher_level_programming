@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    Define a function that checks if an object is either and instance of a local \
-    class or an inherited class
+    Define a function that checks if an object is either and instance of \
+    a local class or an inherited class
     """
 
 
