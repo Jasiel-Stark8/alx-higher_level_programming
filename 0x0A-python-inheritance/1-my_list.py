@@ -4,8 +4,8 @@
 
 class MyList(list):
     """
-    A subclass of list that provides additional functionality for printing the \
-    elements of the list in sorted order.
+    A subclass of list that provides additional functionality for \
+        printing the elements of the list in sorted order.
     """
 
     def print_sorted(self):
