@@ -2,9 +2,6 @@
 """Define a clsass MyList"""
 
 
-class list():
-    pass
-
 class MyList(list):
     """Return sorted list in ascending order"""
     def print_sorted(self):
