@@ -5,7 +5,8 @@
 
 
 def is_same_class(obj, a_class):
-    """validate if object is an exact instance of specifeid class
+    """
+    Function that validates if object is an exact instance of specifeid class
 
     Args: (obj) is the object to be validated
     is matched against an exact class name
@@ -15,6 +16,6 @@ def is_same_class(obj, a_class):
     False otherwise
     """
 
-    if isinstance(obj, a_class):
+    if type(obj) == a_class:
         return True
     return False
