@@ -1,1 +1,10 @@
 #!/usr/bin/python3
+"""Define a function that checks  if the object is an instance of a class \
+    that inherited (directly or indirectly) from the specified class
+    """
+
+
+def inherits_from(obj, a_class):
+    if type(obj) == issubclass(a_class):
+        return True
+    return False
