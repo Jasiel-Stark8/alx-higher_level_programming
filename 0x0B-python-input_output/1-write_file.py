@@ -4,7 +4,7 @@
 
 def write_file(filename="", text=""):
     """
-    Write a string to a text file (UTF8) and return the number of 
+    Write a string to a text file (UTF8) and return the number of
     characters written.
     """
     try:
@@ -12,5 +12,4 @@ def write_file(filename="", text=""):
             file.write(text)
             return len(text)
     except OSError:
-        return -1  # Return -1 to indicate an error occurred during 
-# file writing
+        return -1  # Returns -1 when an error occurres
