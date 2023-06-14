@@ -5,7 +5,7 @@
 def write_file(filename="", text=""):
     """
     Write a string to a text file (UTF8)
-    Returns: Number of characters writen
+    Returns: Number of characters written
     """
     if filename == "":
         with open(filename, 'w', encoding="UTF8") as file:
