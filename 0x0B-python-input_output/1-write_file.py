@@ -9,4 +9,4 @@ def write_file(filename="", text=""):
     """
     if filename is None:
         with open(filename, 'w', encoding="UTF8", text=text) as txt_len:
-            print(len(txt_len))
+            return len(txt_len)
