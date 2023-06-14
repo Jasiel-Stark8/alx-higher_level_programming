@@ -8,9 +8,5 @@ def write_file(filename="", text=""):
     Returns: Number of characters writen
     """
     if filename is None:
-        with open(filename, 'w', encoding="UTF8", text=text) as f:
-            with open(filename, 'r', encoding="UTF8"):
-                count = range(len(text.split(sep=" ")))
-                for character in text.split(sep=" "):
-                    count += len(character)
-                print(count)
+        with open(filename, 'w', encoding="UTF8", text=text) as txt_len:
+            print(len(txt_len))
