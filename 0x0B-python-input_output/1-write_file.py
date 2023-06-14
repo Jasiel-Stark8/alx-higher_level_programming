@@ -13,4 +13,4 @@ def write_file(filename="", text=""):
             return len(text)
     except OSError:
         return -1  # Return -1 to indicate an error occurred during 
-        # file writing
+# file writing
