@@ -8,7 +8,7 @@ def write_file(filename="", text=""):
     characters written.
     """
     try:
-        with open(filename, 'w', encoding="UTF-8") as file:
+        with open(filename, 'w', encoding="utf-8") as file:
             file.write(text)
             return len(text)
     except OSError:
