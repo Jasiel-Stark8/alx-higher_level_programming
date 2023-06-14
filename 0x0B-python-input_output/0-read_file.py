@@ -1,9 +1,6 @@
-import os
+#!/usr/bin/python3
 
-
-if not os.path.exists('file.txt'):
-    open('file.txt', "w").close()
-
-    f = open('file.txt', 'w')
-    f.write("Hi there, you've done very well...")
-    f.close()
+def read_file(filename=""):
+    """Read from file (UTF encoding) and print to stdout"""
+    with open(filename, 'r', encoding="utf") as txt:
+        print(txt.read(), end='')
