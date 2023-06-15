@@ -12,4 +12,4 @@ def write_file(filename="", text=""):
             file.write(text)
             return len(text)
     except OSError:
-        return -1  # Returns -1 when an error occurs
+        print("File Already Exists")  # Returns -1 when an error occurs
