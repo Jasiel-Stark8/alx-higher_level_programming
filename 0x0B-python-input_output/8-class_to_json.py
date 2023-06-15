@@ -11,9 +11,10 @@ def class_to_json(obj):
     Returns dictionary description of python Data structures
     (list, dictionary, string, integer and boolean)
     """
-    if isinstance(obj, (list, dict, str, int, bool)):
-        return (obj)
-    elif hasattr(obj, '__dict__'):
-        return obj.__dict__
-    else:
-        raise TypeError("Object type is not supported: " + type(obj).__name__)
+    result = {}
+    for attr in obj.__dict__:
+        value = obj.__dict__[attr]
+        if isinstance(obj, (list, dict, str, int, bool)):
+            result[attr] = value
+
+    return result
