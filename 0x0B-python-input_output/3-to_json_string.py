@@ -4,5 +4,8 @@ import json
 
 
 def to_json_string(my_obj):
-    """Convert object(string) to JSON"""
+    """Convert object(string) to JSON
+    can be used to convert a dictionary and send it as a JSON between web 
+    servers as APIs
+    """
     return json.dumps(my_obj)
