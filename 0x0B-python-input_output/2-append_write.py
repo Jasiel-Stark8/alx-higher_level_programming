@@ -12,4 +12,4 @@ def write_file(filename="", text=""):
         The number of characters written.
     """
     with open(filename, "a", encoding="utf-8") as f:
-        return f.append(text)
+        return f.write(text)
