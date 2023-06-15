@@ -5,4 +5,4 @@ import json
 
 def to_json_string(my_obj):
     """Convert object(string) to JSON"""
-    return json.load(my_obj)
+    return json.dumps(my_obj)
