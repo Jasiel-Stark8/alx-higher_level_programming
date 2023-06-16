@@ -21,4 +21,3 @@ def class_to_json(obj):
             result[attr] = value
 
     return result
-
