@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a parent class Rectangle"""
 from models.base import Base
+Base = __import__('').Base
 
 
 class Rectangle(Base):
@@ -80,3 +81,42 @@ class Rectangle(Base):
         """Print string representation of Rectangle"""
         return f"[Reectangle] ({self.id}) {self.x}/{self.y} \
             - {self.width}/{self.height}"
+
+    def update(self, *args):
+        """Update Rectangle"""
+        # handle if none is given
+        if len(args) <= 1:
+            raise ValueError("Coordinates can't be empty")
+
+        # if only x is given
+        if len(args) == 2:
+            if not isinstance(args[1], int):
+                raise TypeError("First argument must be an \
+                    integer representing 'x'")
+            if args[1] < 0:
+                raise ValueError("'x' must be >= 0")
+            self.__x = args[1]
+            return
+
+        # if x and y are given
+        if len(args) == 3:
+            if not isinstance(args[1], int):
+                raise TypeError("First argument must be an \
+                    integer representing 'x'")
+            if args[1] < 0:
+                raise ValueError("'x' must be >= 0")
+            self.__x = args[1]
+
+            if not isinstance(args[2], int):
+                raise TypeError("Second argument must be an \
+                    integer representing 'y'")
+            if args[2] < 0:
+                raise ValueError("'y' must be >= 0")
+            self.__y = args[2]
+            return
+
+        # handle when more than 3 arguments (filename inclusive) are given
+        if len(args) > 3:
+            raise ValueError("Too many arguments provided, \
+                maximum of 2 (x, y) are allowed")
+        
